@@ -214,10 +214,10 @@ func getInstalledVersion() (InstalledVersion, error) {
 	}
 	oa := strings.Split(vs[3], "/")
 	return InstalledVersion{
-		Os:      strings.TrimSpace(oa[0]),
-		Arch:    strings.TrimSpace(oa[1]),
-		Version: "go1.22.0", //vs[2],
-		//Version: vs[2],
+		Os:   strings.TrimSpace(oa[0]),
+		Arch: strings.TrimSpace(oa[1]),
+		//Version: "go1.22.0", //vs[2],
+		Version: strings.TrimSpace(vs[2]),
 	}, nil
 }
 
